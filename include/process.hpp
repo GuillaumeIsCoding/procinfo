@@ -24,7 +24,7 @@ typedef struct Information
     PROCESS_HANDLE handle;      ///< Process handle
 
     std::string to_string() const;
-} PROCESS_INFORMATION;
+} PROCESS_INFO;
 
 class Process
 {
@@ -39,7 +39,7 @@ class Process
         Process& flags();
         Process& handle();
 
-        PROCESS_INFORMATION get_information() const;
+        PROCESS_INFO get_information() const;
 
         std::string to_string() const;
         
@@ -48,7 +48,7 @@ class Process
         static std::shared_ptr<Process> Create(PID pid);
 
     private:
-        PROCESS_INFORMATION m_information;
+        PROCESS_INFO m_information;
 };
 
 namespace std

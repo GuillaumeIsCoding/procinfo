@@ -1,8 +1,8 @@
-#include "include/enumerate_process.hpp"
+#include "enumerate_process.hpp"
 
-#include "include/process.hpp"
+#include "process.hpp"
 
-#include "include/header.hpp"
+#include "header.hpp"
 
 #if __linux__
 

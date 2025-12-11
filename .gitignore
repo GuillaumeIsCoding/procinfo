@@ -43,5 +43,7 @@
 # builds & installs
 
 builds/
+build/
 
 installs/
+install/

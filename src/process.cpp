@@ -1,4 +1,4 @@
-#include "include/process.hpp"
+#include "process.hpp"
 
 #if __linux__
 
@@ -187,8 +187,9 @@ Process& Process::folder()
 
     if (error)
     {
-        auto data = process_folder.data();
-        data = TEXT("<unknown>");
+        const TCHAR* unknown =TEXT("<unknown>");
+        process_folder.clear();
+        process_folder.insert(process_folder.end(), unknown, unknown + _tcslen(unknown) + 1);
     }
 
     #ifdef UNICODE
