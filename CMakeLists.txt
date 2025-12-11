@@ -33,4 +33,9 @@ if (BUILD_SANDBOX)
     add_executable(ProcInfo sandbox/main.cpp)
 
     target_link_libraries(ProcInfo PRIVATE ProcInfoLib)
+
+    target_include_directories(ProcInfo
+        PRIVATE
+            ${CMAKE_CURRENT_SOURCE_DIR}/include
+    )
 endif ()

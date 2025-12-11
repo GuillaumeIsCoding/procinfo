@@ -1,5 +1,7 @@
 #include <enumerate_process.hpp>
 
+#include <process.hpp>
+
 #include <iostream>
 
 #define SEPARATOR "==============================================="
@@ -19,7 +21,7 @@ int main(int argc, char** argv)
         counter++;
 
         std::cout << "PID " << pid << " :\n"
-                  << process << SEPARATOR << std::endl;
+                  << process << "\n" << SEPARATOR << std::endl;
     }
 
     std::cout << "Total of active process : " << counter << std::endl;

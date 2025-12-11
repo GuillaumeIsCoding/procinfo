@@ -244,6 +244,11 @@ Process& Process::handle()
     return *this;
 }
 
+PROCESS_INFO Process::get_information() const
+{
+    return m_information;
+}
+
 std::shared_ptr<Process> Process::Create(PID pid)
 {
     auto process = Process(pid).handle()
